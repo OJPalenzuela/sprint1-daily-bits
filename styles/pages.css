@@ -1,0 +1,33 @@
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body{
+    color: white !important;
+}
+
+#section{
+    display: grid;
+    grid-template-rows: 1fr 8fr 1.4fr;
+}
+
+#div-title,
+#div-content{
+    background-color: #1d1f26;
+}
+
+#div-pages{
+    background-color: #3c3f40;
+}
+
+
+.page{
+    text-decoration: none !important;
+    color: white !important;
+}
+.selected{
+    text-decoration: none !important;
+    font-weight: bold !important;
+    color: #2CB67D !important;
+}
