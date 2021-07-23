@@ -1,0 +1,25 @@
+{
+    "title": "hola",
+    "preguntas": [
+        {
+            "descripcion": "¿Qué etiqueta HTML nos sirve para incluir archivos JavaScript?",
+            "opciones": [
+                "< BR >",
+                "< script >",
+                "< styles >"
+            ],
+            "respuesta": "< script >",
+            "name": "etJS"
+        },
+        {
+            "descripcion": "esta seria la prgunta 2",
+            "opciones": [
+                "TEXTO1",
+                "TEXTO2",
+                "TEXTO3"
+            ],
+            "respuesta": "TEXTO1",
+            "name": "etJS"
+        }
+    ]
+}
