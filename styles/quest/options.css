@@ -9,3 +9,62 @@
     padding: 10px !important;
 
 }
+
+#div-rechazado{
+    position: absolute; 
+    bottom: 0; 
+    height: 10em ; 
+    background-color: #f9cfd7; 
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 16px !important;
+}
+
+
+#div-rechazado .comprobar{
+    color: white !important;
+    text-decoration: none;
+    width: 100% !important;
+    align-self: center;
+
+    border: 2px solid #B81E3B !important;
+    box-shadow: 0px 2px  #B81E3B !important;
+    background-color: #EF4565 !important;
+}
+
+#div-correcto{
+    position: absolute; 
+    bottom: 0; 
+    height: 10em ; 
+    background-color: #ACFFCF; 
+    width: 100%;
+
+    padding: 16px !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: black;
+}
+
+#div-correcto .comprobar{
+    color: white !important;
+    text-decoration: none;
+    width: 100% !important;
+    align-self: center;
+
+    border: 2px solid #0F915B !important;
+    box-shadow: 0px 2px  #0F915B !important;
+    background-color: #2cb67d !important;
+}
+
+
+#div-rechazado .comprobar:active{
+    
+    box-shadow: none !important;
+}
