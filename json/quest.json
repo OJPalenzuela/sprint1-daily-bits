@@ -4,7 +4,7 @@
             "type": "a",
             "descripcion": "¿Qué etiqueta HTML nos sirve para incluir archivos JavaScript?",
             "opciones": [
-                "< BR >",
+                "< br >",
                 "< script >",
                 "< styles >"
             ],
@@ -13,13 +13,13 @@
         },
         {
             "type": "a",
-            "descripcion": "¡Qué etiqueta es la semánticamente correcta para el contenido principal?",
+            "descripcion": "¿Cuál de estos es un tipo de dato en JavaScript?",
             "opciones": [
-                "main",
-                "section",
-                "header"
+                "boolean",
+                "function",
+                "main"
             ],
-            "respuesta": "main",
+            "respuesta": "boolean",
             "name": "etJS"
         },
         {
@@ -34,21 +34,31 @@
             "name": "etJS"
         },
         {
-            "type": "b",
-            "descripcion": "Ordena de manera correcta",
+            "type": "a",
+            "descripcion": "¿Qué es el operador '==='?",
             "opciones": [
-                "< !DOCTYPE html>",
-                "< /html >",
-                "< body >< / body >",
-                "< html >",
-                "< head >< / head>"
+                "Igualdad estricta",
+                "Desigualdad",
+                "Igualdad"
+            ],
+            "respuesta": "Igualdad estricta",
+            "name": "etJS"
+        },
+        {
+            "type": "b",
+            "descripcion": "Ordena de manera correcta la siguiente Función",
+            "opciones": [
+                "{}",
+                "getName",
+                "(name)",
+                "function"
+                
             ],
             "respuesta": [
-                "select_0",
                 "select_3",
-                "select_4",
+                "select_1",
                 "select_2",
-                "select_1"
+                "select_0"
             ],
             "name": "etJS"
         }

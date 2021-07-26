@@ -1,6 +1,7 @@
 const URL = "./json/quest.json";
 const request = new XMLHttpRequest();
 const div_desc = document.getElementById("div-descripcion");
+const div_res = document.getElementById("div-respuesta");
 const div_pre = document.getElementById("div-preguntas");
 const section = document.getElementById("section");
 
@@ -20,11 +21,10 @@ request.onload = respuesta;
 
 btn.addEventListener("click", test);
 
-setInterval(timer, 5000);
 function timer(){
-    var i = parseInt(localStorage.getItem("time"));
-    var b = (i + 5/60).toFixed(2);
-    localStorage.setItem("time", b + "");
+    var i = parseFloat(localStorage.getItem("time"));
+    var b = i + 2/3600;
+    localStorage.setItem("time", b.toFixed(4) + "");
 
 }
 
@@ -35,6 +35,7 @@ function respuesta() {
     total = preguntaList['preguntas'].length;
     console.log(total)
     //activarBTN();
+    setInterval(timer, 2000);
 }
 
 function llenar(jsonElem) {
@@ -74,6 +75,7 @@ function anadirElementos(jsonList) {
 
         case "b":
             const arra = jsonList['preguntas'][position];
+            div_desc.innerHTML = arra.descripcion;
 
             arra.opciones.forEach((element, index) => {
                 div_pre.innerHTML += `
@@ -86,12 +88,12 @@ function anadirElementos(jsonList) {
 
             opcionList.forEach(function (elem) {
                 elem.addEventListener("click", function () {
-                    if (!verificar(div_desc, elem)) {
-                        div_desc.appendChild(elem);
-                        validar(div_desc.childNodes)
+                    if (!verificar(div_res, elem)) {
+                        div_res.appendChild(elem);
+                        validar(div_res.childNodes)
                     } else {
                         div_pre.appendChild(elem);
-                        validar(div_desc.childNodes)
+                        validar(div_res.childNodes)
                     }
                 });
             });
@@ -107,7 +109,7 @@ function anadirElementos(jsonList) {
             }
 
             function validar(elem) {
-                if (elem.length == 5) {
+                if (elem.length == arra.opciones.length) {
                     console.log("esta entrando")
                     activarBTN();
                 } else {
@@ -144,6 +146,7 @@ function anadirElementos(jsonList) {
 function resetHTML() {
     div_desc.innerHTML = '';
     div_pre.innerHTML = '';
+    div_res.innerHTML = '';
 }
 
 function aleatorio() {
@@ -177,7 +180,7 @@ function test() {
         btn.disabled = true;
         activarBTN();
     } else {
-        resetHTML();
+        window.location.replace("./home.html");
     }
 }
 
@@ -209,7 +212,7 @@ function validarPreguntas() {
             break;
         case "b":
             var listNodes = new Array();
-            div_desc.childNodes.forEach(element =>{
+            div_res.childNodes.forEach(element =>{
                 listNodes.push(element.id)
             })
             
@@ -298,7 +301,7 @@ function siguientePregunta() {
         btn.disabled = true;
         activarBTN()
     } else {
-        resetHTML();
+        window.location.replace("./home.html");
     }
 }
 
@@ -355,7 +358,7 @@ exit.addEventListener("click", function(){
         <div id="volver">
         <h2>¡Espera! Aún te falta</h2>
         <p>¿Estás seguro que quieres salir?</p>
-        <div>
+        <div class="d-flex">
         <input id='btn-volver' class='comprobar' type='button' value='VOLVER'>
         <input id='btn-quedarse' class='comprobar' type='button' value='QUEDARSE'>
         </div>

@@ -8,7 +8,7 @@ if(localStorage.getItem("preIncorrectas") == undefined || localStorage.getItem("
     localStorage.setItem("preIncorrectas", "0");
 }
 if(localStorage.getItem("time") == undefined || localStorage.getItem("time") == "" || localStorage.getItem("time") == null ){
-    localStorage.setItem("time", "0");
+    localStorage.setItem("time", "0.03");
 }
 setTimeout(()=>{
     window.location.replace("./home.html")
