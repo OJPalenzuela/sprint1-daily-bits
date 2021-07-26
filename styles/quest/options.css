@@ -52,6 +52,36 @@
     color: black;
 }
 
+#all{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    height: 100% ; 
+    background-color: rgba(50, 50, 50, 0.6); 
+    width: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+}
+
+#volver{
+    background-color: #141414;
+    padding: 20px !important;
+    width: 100%;
+    max-width: 900px;
+    color: white;
+    border: 2px darkgray solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #div-correcto .comprobar{
     color: white !important;
     text-decoration: none;

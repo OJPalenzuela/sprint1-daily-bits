@@ -1,0 +1,14 @@
+.datos{
+    padding: 12px !important;
+    border: 2px solid white;
+    border-radius: 8px;
+
+    width: 90%;
+    max-width: 600px;
+
+    margin: 8px !important;
+
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}

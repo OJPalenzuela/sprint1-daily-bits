@@ -16,7 +16,6 @@ opcionList.forEach(function(elem){
             div_opciones.appendChild(elem);
             validar(div_respuesta.childNodes);
         }
-    
     });
 });
 

@@ -1,6 +1,7 @@
 {
     "preguntas": [
         {
+            "type": "a",
             "descripcion": "¿Qué etiqueta HTML nos sirve para incluir archivos JavaScript?",
             "opciones": [
                 "< BR >",
@@ -11,6 +12,7 @@
             "name": "etJS"
         },
         {
+            "type": "a",
             "descripcion": "¡Qué etiqueta es la semánticamente correcta para el contenido principal?",
             "opciones": [
                 "main",
@@ -21,6 +23,7 @@
             "name": "etJS"
         },
         {
+            "type": "a",
             "descripcion": "¿Qué significa DRY?",
             "opciones": [
                 "Don´t repeat yellow",
@@ -28,6 +31,25 @@
                 "Don´t recicle year"
             ],
             "respuesta": "Don´t repeat yourself",
+            "name": "etJS"
+        },
+        {
+            "type": "b",
+            "descripcion": "Ordena de manera correcta",
+            "opciones": [
+                "< !DOCTYPE html>",
+                "< /html >",
+                "< body >< / body >",
+                "< html >",
+                "< head >< / head>"
+            ],
+            "respuesta": [
+                "select_0",
+                "select_3",
+                "select_4",
+                "select_2",
+                "select_1"
+            ],
             "name": "etJS"
         }
     ]

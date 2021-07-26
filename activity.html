@@ -9,20 +9,36 @@
     <!-- CSS only -->
     <link href="styles/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/pages.css">
+    <link rel="stylesheet" href="styles/pages/activity.css">
 
 </head>
 <body>
     <section id="section" class="container-fluid vh-100">
 
         <div id="div-title" class="container-fluid d-flex align-items-center justify-content-center">
-            <h2 class="text-center">Titulo</h2>
+            <h2 class="text-center">Estadísticas</h2>
         </div>
         
-        <div id="div-content" class="">
-            content
+        <div id="div-content" class="d-flex flex-column align-items-center justify-content-center">
+            <div class="datos">
+                <p>Tiempo de estudio (horas)</p>
+                <span id="time"></span>
+            </div>
+            <div class="datos">
+                <p>Respuestas contestadas</p>
+                <span id="total"></span>
+            </div>
+            <div class="datos">
+                <p>Respuestas correctas</p>
+                <span id="correctas"></span>
+            </div>
+            <div class="datos">
+                <p>Respuestas incorrectas</p>
+                <span id="incorrectas"></span>
+            </div>
         
         </div>
-        <div id="div-pages" class="d-flex flex-row justify-content-around align-items-center">
+        <div id="div-pages" class="container m-auto d-flex flex-row justify-content-around align-items-center">
             
             <a id="home" href="home.html" class="text-center page">
                 <img src="images/home.png" alt="" class="">
@@ -39,6 +55,6 @@
         </div>
     </section>
     
-   
+   <script src="./scripts/activity.js"></script>
 </body>
 </html>
