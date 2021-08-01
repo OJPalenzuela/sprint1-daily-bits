@@ -310,6 +310,7 @@ function siguientePregunta() {
         btn.disabled = true;
         activarBTN()
     } else {
+        localStorage.setItem(curse, "border_complete")
         window.location.replace("./home.html");
     }
 }
@@ -352,6 +353,7 @@ function lives(rein){
         document.body.appendChild(etq)
 
         document.getElementById("btn-volver").addEventListener("click", function(){
+            localStorage.setItem(curse, "border_incomplete")
             window.location.replace("./home.html");
         });
 
@@ -378,6 +380,7 @@ exit.addEventListener("click", function(){
         document.body.appendChild(etq)
 
         document.getElementById("btn-volver").addEventListener("click", function(){
+            localStorage.setItem(curse, "border_incomplete")
             window.location.replace("./home.html");
         });
         document.getElementById("btn-quedarse").addEventListener("click", function(){
