@@ -1,9 +1,11 @@
-const URL = "./json/quest.json";
+const URL = './json/quest.json';
 const request = new XMLHttpRequest();
 const div_desc = document.getElementById("div-descripcion");
 const div_res = document.getElementById("div-respuesta");
 const div_pre = document.getElementById("div-preguntas");
 const section = document.getElementById("section");
+const img = document.getElementById('img-description');
+
 
 const btn = document.getElementById("btn_comp");
 var check = document.getElementsByName("etJS");
@@ -11,6 +13,7 @@ var check = document.getElementsByName("etJS");
 var preguntaList;
 var position;
 var total;
+let curse = localStorage.getItem("curse");
 
 request.open('GET', URL, true);
 
@@ -25,17 +28,17 @@ function timer(){
     var i = parseFloat(localStorage.getItem("time"));
     var b = i + 2/3600;
     localStorage.setItem("time", b.toFixed(4) + "");
-
 }
 
 function respuesta() {
     const jsonElem = request.response;
     preguntaList = jsonElem;
     llenar(preguntaList);
-    total = preguntaList['preguntas'].length;
+    total = preguntaList[curse].length;
     console.log(total)
     //activarBTN();
     setInterval(timer, 2000);
+    
 }
 
 function llenar(jsonElem) {
@@ -47,14 +50,19 @@ function llenar(jsonElem) {
 function anadirElementos(jsonList) {
     var position = aleatorio();
     resetHTML();
+    var index_image = Math.floor(Math.random() * 4);
+    img.src = '';
 
-    switch (jsonList['preguntas'][position].type) {
+    switch (jsonList[curse][position].type) {
         case "a":
-            const arr = jsonList['preguntas'][position];
+            const arr = jsonList[curse][position];
             const desc = document.createElement('p');
 
             desc.textContent = arr.descripcion;
             div_desc.appendChild(desc);
+
+            
+            img.src = './images/caracters/' + index_image + '.png';
 
             var list = arr.opciones;
             list.forEach((element, index) => {
@@ -74,7 +82,7 @@ function anadirElementos(jsonList) {
             break;
 
         case "b":
-            const arra = jsonList['preguntas'][position];
+            const arra = jsonList[curse][position];
             div_desc.innerHTML = arra.descripcion;
 
             arra.opciones.forEach((element, index) => {
@@ -119,7 +127,7 @@ function anadirElementos(jsonList) {
             break;
 
         case "c":
-            var arraaa = jsonList['preguntas'][position];
+            var arraaa = jsonList[curse][position];
 
             arraaa.opciones.forEach((element, index) => {
                 div_pre.innerHTML += `
@@ -150,15 +158,15 @@ function resetHTML() {
 }
 
 function aleatorio() {
-    var arrayPos = Math.floor(Math.random() * preguntaList['preguntas'].length);
+    var arrayPos = Math.floor(Math.random() * preguntaList[curse].length);
     position = arrayPos;
-    console.log(preguntaList['preguntas'].length)
+    console.log(preguntaList[curse].length)
     console.log("a")
     return arrayPos;
 }
 
 function activarBTN() {
-    switch (preguntaList['preguntas'][position].type) {
+    switch (preguntaList[curse][position].type) {
         case "a":
             btn.disabled = false;
             break;
@@ -174,12 +182,13 @@ function activarBTN() {
 
 
 function test() {
-    if (!preguntaList['preguntas'].length == 0) {
+    if (!preguntaList[curse].length == 0) {
         validarPreguntas();
 
         btn.disabled = true;
         activarBTN();
     } else {
+        localStorage.setItem(curse, "border_complete")
         window.location.replace("./home.html");
     }
 }
@@ -196,12 +205,12 @@ function removeItemFromArr(arr, item) {
 
 
 function validarPreguntas() {
-    switch (preguntaList['preguntas'][position].type) {
+    switch (preguntaList[curse][position].type) {
         case "a":
             var isCorrect;
             check.forEach(element => {
                 if (element.checked) {
-                    if (element.value == preguntaList['preguntas'][position].respuesta) {
+                    if (element.value == preguntaList[curse][position].respuesta) {
                         isCorrect = true;
                     } else {
                         isCorrect = false;
@@ -219,7 +228,7 @@ function validarPreguntas() {
             var isCorrect;
             function setCorrect(){
                 for(var i = 0; i < listNodes.length; i++){
-                    if(listNodes[i] == preguntaList['preguntas'][position].respuesta[i]){
+                    if(listNodes[i] == preguntaList[curse][position].respuesta[i]){
                         isCorrect = true;
                     }else{
                         isCorrect = false;
@@ -292,11 +301,11 @@ function validad(typeID, etq) {
 }
 
 function siguientePregunta() {
-    removeItemFromArr(preguntaList['preguntas'], preguntaList['preguntas'][position])
+    removeItemFromArr(preguntaList[curse], preguntaList[curse][position])
 
     console.log(preguntaList);
 
-    if (!preguntaList['preguntas'].length == 0) {
+    if (!preguntaList[curse].length == 0) {
         anadirElementos(preguntaList);
         btn.disabled = true;
         activarBTN()

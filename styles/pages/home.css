@@ -2,3 +2,13 @@ section div div a{
     text-decoration: none !important;
     color: white !important;
 }
+
+.border_incomplete{
+    border: 8px solid rgb(190, 190, 190);
+    border-radius: 50%;
+}
+
+.border_complete{
+    border: 8px solid rgb(1, 180, 10);
+    border-radius: 50%;
+}

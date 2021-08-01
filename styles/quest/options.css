@@ -36,6 +36,10 @@
     background-color: #EF4565 !important;
 }
 
+#div-rechazado h2{
+    color: #B81E3B;
+}
+
 #div-correcto{
     position: absolute; 
     bottom: 0; 

@@ -1,5 +1,5 @@
 {
-    "preguntas": [
+    "JavaScript": [
         {
             "type": "a",
             "descripcion": "¿Qué etiqueta HTML nos sirve para incluir archivos JavaScript?",
@@ -52,13 +52,140 @@
                 "getName",
                 "(name)",
                 "function"
-                
             ],
             "respuesta": [
                 "select_3",
                 "select_1",
                 "select_2",
                 "select_0"
+            ],
+            "name": "etJS"
+        }
+    ],
+    "CSS": [
+        {
+            "type": "a",
+            "descripcion": "¿Qué etiqueta HTML nos sirve para incluir archivos JavaScript?",
+            "opciones": [
+                "< br >",
+                "< script >",
+                "< styles >"
+            ],
+            "respuesta": "< script >",
+            "name": "etJS"
+        },
+        {
+            "type": "a",
+            "descripcion": "¿Cuál de estos es un tipo de dato en JavaScript?",
+            "opciones": [
+                "boolean",
+                "function",
+                "main"
+            ],
+            "respuesta": "boolean",
+            "name": "etJS"
+        },
+        {
+            "type": "a",
+            "descripcion": "¿Qué significa DRY?",
+            "opciones": [
+                "Don´t repeat yellow",
+                "Don´t repeat yourself",
+                "Don´t recicle year"
+            ],
+            "respuesta": "Don´t repeat yourself",
+            "name": "etJS"
+        },
+        {
+            "type": "a",
+            "descripcion": "¿Qué es el operador '==='?",
+            "opciones": [
+                "Igualdad estricta",
+                "Desigualdad",
+                "Igualdad"
+            ],
+            "respuesta": "Igualdad estricta",
+            "name": "etJS"
+        },
+        {
+            "type": "b",
+            "descripcion": "Ordena de manera correcta la siguiente Función",
+            "opciones": [
+                "{}",
+                "getName",
+                "(name)",
+                "function"
+            ],
+            "respuesta": [
+                "select_3",
+                "select_1",
+                "select_2",
+                "select_0"
+            ],
+            "name": "etJS"
+        }
+    ],
+    "HTML": [
+        {
+            "type": "a",
+            "descripcion": "¿Qué etiqueta es semánticamente correcta para el contenido principal?",
+            "opciones": [
+                "main",
+                "section",
+                "header"
+            ],
+            "respuesta": "main",
+            "name": "etJS"
+        },
+        {
+            "type": "a",
+            "descripcion": "¿Cuál de estas etiquetas se usa para añadir una imagen a HTML5?",
+            "opciones": [
+                "figcaption",
+                "figure",
+                "img"
+            ],
+            "respuesta": "img",
+            "name": "etJS"
+        },
+        {
+            "type": "a",
+            "descripcion": "¿Cuál de estás etiquetas se usa para la listas no ordenadas?",
+            "opciones": [
+                "ol",
+                "ul",
+                "li"
+            ],
+            "respuesta": "ul",
+            "name": "etJS"
+        },
+        {
+            "type": "a",
+            "descripcion": "¿Qué etiqueta se usa para los enlaces?",
+            "opciones": [
+                "a",
+                "link",
+                "src"
+            ],
+            "respuesta": "a",
+            "name": "etJS"
+        },
+        {
+            "type": "b",
+            "descripcion": "Organiza la estructura de un documento HTML5",
+            "opciones": [
+                "< body >< / body >",
+                "< / html>",
+                "< !DOCTYPE html >",
+                "< html >",
+                "< head >< / head> "
+            ],
+            "respuesta": [
+                "select_2",
+                "select_3",
+                "select_4",
+                "select_0",
+                "select_1"
             ],
             "name": "etJS"
         }

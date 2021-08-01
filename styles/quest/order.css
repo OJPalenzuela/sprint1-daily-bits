@@ -52,3 +52,20 @@
     display: grid !important;
     grid-template-columns: 1fr;
 }
+
+#div-header{
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    padding: 1.5em !important;
+}
+
+#img-description{
+    width: 20%;
+    max-width: 90px;
+    min-width: 55px;
+}
+
+#div-descripcion{
+    font-size: 26px;
+}

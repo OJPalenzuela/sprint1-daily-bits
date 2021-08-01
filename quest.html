@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="styles/quest/order.css">
     <link rel="stylesheet" href="styles/quest/options.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet"> 
 
 </head>
 <body>
@@ -20,9 +23,7 @@
 
         <div id="div-title" class="d-flex justify-content-around align-items-center">
             <div id="exit">
-                
                     <img src="./images/exit.png" alt="">
-                
             </div>
            <div class="progress w-50">
                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress"></div>
@@ -35,7 +36,11 @@
         </div>
         
         <div id="div-content" class="contenido">
-            <h2 id="div-descripcion" class="text-center"></h2>
+            <div id="div-header">
+                <img id="img-description" src="" alt="">
+                <div id="div-descripcion" class="text-center"></div>
+            </div>
+            
             <div id="div-respuesta" class="text-center"></div>
             <div id="div-preguntas" class="d-flex flex-wrap flex-column align-items-center justify-content-center"></div>
         </div>
