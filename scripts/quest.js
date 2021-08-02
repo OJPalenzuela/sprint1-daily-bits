@@ -1,4 +1,4 @@
-const URL = './json/quest.json';
+const URL = '../json/quest.json';
 const request = new XMLHttpRequest();
 const div_desc = document.getElementById("div-descripcion");
 const div_res = document.getElementById("div-respuesta");
