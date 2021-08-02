@@ -65,63 +65,35 @@
     "CSS": [
         {
             "type": "a",
-            "descripcion": "¿Qué etiqueta HTML nos sirve para incluir archivos JavaScript?",
+            "descripcion": "¿Cuál es la propiedad CSS que controla el tamaño del texto?",
             "opciones": [
-                "< br >",
-                "< script >",
-                "< styles >"
+                "font-style",
+                "font-size",
+                "text-style"
             ],
-            "respuesta": "< script >",
+            "respuesta": "font-size",
             "name": "etJS"
         },
         {
             "type": "a",
-            "descripcion": "¿Cuál de estos es un tipo de dato en JavaScript?",
+            "descripcion": "¿Cómo se cambia el margen izquierdo de un elemento?",
             "opciones": [
-                "boolean",
-                "function",
-                "main"
+                "margin:",
+                "indent:",
+                "margin-left:"
             ],
-            "respuesta": "boolean",
+            "respuesta": "margin-left:",
             "name": "etJS"
         },
         {
             "type": "a",
-            "descripcion": "¿Qué significa DRY?",
+            "descripcion": "¿Cuál es la propiedad usada para cambiar el color de fondo?",
             "opciones": [
-                "Don´t repeat yellow",
-                "Don´t repeat yourself",
-                "Don´t recicle year"
+                "background-color:",
+                "color:",
+                "background-image:"
             ],
-            "respuesta": "Don´t repeat yourself",
-            "name": "etJS"
-        },
-        {
-            "type": "a",
-            "descripcion": "¿Qué es el operador '==='?",
-            "opciones": [
-                "Igualdad estricta",
-                "Desigualdad",
-                "Igualdad"
-            ],
-            "respuesta": "Igualdad estricta",
-            "name": "etJS"
-        },
-        {
-            "type": "b",
-            "descripcion": "Ordena de manera correcta la siguiente Función",
-            "opciones": [
-                "{}",
-                "getName",
-                "(name)",
-                "function"
-            ],
-            "respuesta": [
-                "select_3",
-                "select_1",
-                "select_2",
-                "select_0"
-            ],
+            "respuesta": "background-color:",
             "name": "etJS"
         }
     ],
